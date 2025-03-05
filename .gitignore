@@ -1,2 +1,10 @@
 ﻿.vs
 BL.Qatar.QsipFileWatcher/obj
+BL.Integrity.Core/bin
+BL.Integrity.Core/obj
+BL.Internal.Messaging/bin
+BL.Internal.Messaging/obj
+BL.Qatar.QsipFileWatcher/bin
+BL.Sip.Utilities.Core/bin
+BL.Sip.Utilities.Core/obj
+BL.Xml.Core/bin
