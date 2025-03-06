@@ -37,8 +37,8 @@ public class ValidateAndRenameSubmissionEventHandler(
                     //Loop through the images in the submission and send them to be transformed
 
                     //But in the meantime we just go onto the next worker
-                    var newQsipDataModel = new QSipPackageDataModel(Path.Combine(dirPath, newFilename));
-                    var myQsipPackageRequestEvent = new QsipPackageRequestIntegrationEvent(newQsipDataModel);
+                    //var newQsipDataModel = new QSipPackageDataModel(Path.Combine(dirPath, newFilename));
+                    var myQsipPackageRequestEvent = new QsipPackageRequestIntegrationEvent(Path.Combine(dirPath, newFilename));
                     await Task.Run(() => externalEventBus.Publish(myQsipPackageRequestEvent));
                 }
                 catch (Exception ex)
