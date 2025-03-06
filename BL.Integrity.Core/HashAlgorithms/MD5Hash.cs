@@ -19,8 +19,8 @@ namespace BL.Integrity.Core.HashAlgorithms
     ///	<revisionHistory> 
     ///		<revision author="Andy Evans" date="26/1/2007">Initial Version</revision>
     ///	</revisionHistory>
-    [XmlType(Namespace = "http://BL.Dom.Schemas.Integrity.MD5Hash")]
-    [XmlRootAttribute(Namespace = "http://BL.Dom.Schemas.Integrity.MD5Hash", IsNullable = false)]
+    [XmlType(Namespace = "http://BL.Schemas.Integrity.MD5Hash")]
+    [XmlRootAttribute(Namespace = "http://BL.Schemas.Integrity.MD5Hash", IsNullable = false)]
     public class MD5Hash
     {
         #region Constants

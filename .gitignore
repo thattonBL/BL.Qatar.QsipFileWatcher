@@ -8,3 +8,9 @@ BL.Qatar.QsipFileWatcher/bin
 BL.Sip.Utilities.Core/bin
 BL.Sip.Utilities.Core/obj
 BL.Xml.Core/bin
+BL.Xml.Core/obj
+EventBus/obj
+EventBusRabbitMQ/bin
+EventBusRabbitMQ/obj
+EventBusServiceBus/bin
+EventBusServiceBus/obj

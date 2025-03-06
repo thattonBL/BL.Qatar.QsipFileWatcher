@@ -19,8 +19,8 @@ namespace BL.Integrity.Core.HashAlgorithms
     ///	<revisionHistory> 
     ///		<revision author="Andy Evans, Leigh Willoughby" date="23/11/2005">Initial Version</revision>
     ///	</revisionHistory>
-    [XmlType(Namespace = "http://BL.Dom.Schemas.Integrity.Sha1Hash")]
-    [XmlRootAttribute(Namespace = "http://BL.Dom.Schemas.Integrity.Sha1Hash", IsNullable = false)]
+    [XmlType(Namespace = "http://BL.Schemas.Integrity.Sha1Hash")]
+    [XmlRootAttribute(Namespace = "http://BL.Schemas.Integrity.Sha1Hash", IsNullable = false)]
     public class Sha1Hash
     {
         #region Constants

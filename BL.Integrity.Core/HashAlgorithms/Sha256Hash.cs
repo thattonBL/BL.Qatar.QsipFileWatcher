@@ -19,8 +19,8 @@ namespace BL.Integrity.Core.HashAlgorithms
     ///	<revisionHistory> 
     ///		<revision author="Andy Evans" date="24/11/2006">Initial Version</revision>
     ///	</revisionHistory>
-    [XmlType(Namespace = "http://BL.Dom.Schemas.Integrity.Sha256Hash")]
-    [XmlRootAttribute(Namespace = "http://BL.Dom.Schemas.Integrity.Sha256Hash", IsNullable = false)]
+    [XmlType(Namespace = "http://BL.Schemas.Integrity.Sha256Hash")]
+    [XmlRootAttribute(Namespace = "http://BL.Schemas.Integrity.Sha256Hash", IsNullable = false)]
     public class Sha256Hash
     {
         #region Constants

@@ -1,7 +1,7 @@
 using BL.Internal.Messaging;
 using BL.Internal.Messaging.Interfaces;
+using BL.Qatar.QsipFileWatcher;
 using BL.Qatar.QsipFileWatcher.InternalEvents.IntegrationEventHandlers;
-using BL.Qatar.QsipFileWatcher.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -20,7 +20,6 @@ HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 builder.Services.AddMediatR(cfg =>
 {
     cfg.RegisterServicesFromAssemblyContaining(typeof(ValidateAndRenameSubmissionEventHandler));
-    cfg.RegisterServicesFromAssemblyContaining(typeof(CreateMetsEventHandler));
 
     //cfg.AddOpenBehavior(typeof(LoggingBehaviour<,>));
     //cfg.AddOpenBehavior(typeof(ValidatorBehavior<,>));
@@ -31,8 +30,8 @@ builder.Services.AddSingleton<IInMemoryMessageQueue, InMemoryMessageQueue>();
 builder.Services.AddSingleton<IInMemoryEventBus, InMemoryEventBus>();
 builder.Services.AddSingleton<FileWatcherService>();
 builder.Services.AddHostedService<InternalEventProcessorJob>();
-builder.Services.AddTransient<IQatarMetsBuilder, QatarMetsBuilder>();
-builder.Services.AddTransient<IArkMinterService, ArkMinterService>();
+
+builder.Services.AddEventBus(builder.Configuration);
 
 using IHost host = builder.Build();
 
